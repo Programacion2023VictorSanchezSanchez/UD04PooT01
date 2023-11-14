@@ -18,6 +18,7 @@ public class Principal {
         while (opc != 5){
             switch(opc) {
                 case 1: //Probar coche
+                    principal.testCoche();
                     break;
                 case 2: //Probar calculadora
                     break;
@@ -71,4 +72,42 @@ public class Principal {
         } while (opc < 1 || opc > 5);
         return opc;
     }
+
+    /**
+     * Probamos la clase Coche
+     */
+        private void testCoche(){
+            //Creamos objetos
+            Coche ibiza = new Coche();
+            Coche cordoba = new Coche();
+
+            //Establecemos valores a ibiza
+            ibiza.setPuertas(4);
+            ibiza.setPeso(1500.0);
+            ibiza.setPrecio(15000.0);
+            ibiza.setMotor("TDI 1200");
+            ibiza.setRuedas(4);
+            ibiza.setModelo("Ibiza");
+            ibiza.setColor("Rojo");
+
+            //Imprimimos
+            System.out.println("Información del primer coche");
+            System.out.println("Puertas: " + ibiza.getPuertas());
+            System.out.println("Peso: " + ibiza.getPeso() + " kg");
+            System.out.println("Precio: " + ibiza.getPrecio() + "€");
+            System.out.println("Motor: " + ibiza.getMotor());
+            System.out.println("Ruedas: " + ibiza.getRuedas());
+            System.out.println("Modelo: " + ibiza.getModelo());
+            System.out.println("Color: " + ibiza.getColor());
+
+            //Probamos errores
+            cordoba.setPuertas(2);
+            cordoba.setPeso(-1200.0);
+            cordoba.setPrecio(25000.0);
+            cordoba.setMotor("TDI 2000");
+            cordoba.setRuedas(4);
+            cordoba.setModelo("Cordoba");
+            cordoba.setColor("Azul");
+
+        }
 }
