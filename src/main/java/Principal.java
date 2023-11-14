@@ -112,7 +112,10 @@ public class Principal {
 
         }
 
-        private void testCalculadora(){
+    /**
+     * Probamos la clase Calculadora
+     */
+    private void testCalculadora(){
             //Creamos el objeto
             Calculadora calculadora = new Calculadora();
 
@@ -132,4 +135,6 @@ public class Principal {
             System.out.println("Multiplicación = " + calculadora.getResultadoMultiplicacion());
             System.out.println("División = " + calculadora.getResultadoDivision());
         }
+
+
 }
