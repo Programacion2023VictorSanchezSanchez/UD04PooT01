@@ -21,6 +21,7 @@ public class Principal {
                     principal.testCoche();
                     break;
                 case 2: //Probar calculadora
+                    principal.testCalculadora();
                     break;
                 case 3: //Probar persona
                     break;
@@ -109,5 +110,26 @@ public class Principal {
             cordoba.setModelo("Cordoba");
             cordoba.setColor("Azul");
 
+        }
+
+        private void testCalculadora(){
+            //Creamos el objeto
+            Calculadora calculadora = new Calculadora();
+
+            //Setteamos los numeros
+            calculadora.setPrimerNumero(5.0);
+            calculadora.setSegundoNumero(4);
+
+            //Mostramos resultado suma y resta
+            System.out.println("Suma = " + calculadora.getResultadoSuma());
+            System.out.println("Resta = " + calculadora.getResultadoResta());
+
+            //Volvemos a settear los numeros
+            calculadora.setPrimerNumero(5.25);
+            calculadora.setSegundoNumero(0);
+
+            //Mostramos resultado multiplicacion y division con nuevos valores
+            System.out.println("Multiplicación = " + calculadora.getResultadoMultiplicacion());
+            System.out.println("División = " + calculadora.getResultadoDivision());
         }
 }
