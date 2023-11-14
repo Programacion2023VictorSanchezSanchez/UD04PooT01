@@ -27,6 +27,7 @@ public class Principal {
                     principal.testPersona();
                     break;
                 case 4: //Probar mi clase
+                    principal.testArma();
                     break;
             }
             opc=principal.menu();
@@ -176,7 +177,31 @@ public class Principal {
         //Mostramos Nif
         System.out.println("NIF: " + persona.getNif());
 
+    }
+    private void testArma(){
+        Arma arma = new Arma();
 
+        arma.setMunicion(50);
+        arma.setRareza("");
+        arma.setNombre("M4a1");
+        arma.setDamage(43);
+
+        System.out.println("Nombre: " + arma.getNombre());
+        System.out.println("Daño: " + arma.getDamage());
+        System.out.println("¿Es modificable? " + arma.esModificable());
+        System.out.println("Rareza: " + arma.getRareza());
+        System.out.println("Munición: " + arma.getMunicion());
+
+        arma.setMunicion(3);
+        arma.setRareza("Raro");
+        arma.setNombre("Ak47");
+        arma.setDamage(89);
+
+        System.out.println("Nombre: " + arma.getNombre());
+        System.out.println("Daño: " + arma.getDamage());
+        System.out.println("¿Es modificable? " + arma.esModificable());
+        System.out.println("Rareza: " + arma.getRareza());
+        System.out.println("Munición: " + arma.getMunicion());
 
     }
 }
