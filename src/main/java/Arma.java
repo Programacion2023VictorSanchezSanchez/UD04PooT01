@@ -12,7 +12,7 @@ public class Arma {
     //Setters y getters de daño
     public void setDamage(double damage){
         //El arma no puede hacer 0 de daño o daño negativo ni más de 80
-        if(damage <= 0 || damage => 80){
+        if(damage <= 0 || damage > 80){
             System.err.println("El daño no es válido");
         }
         else{
