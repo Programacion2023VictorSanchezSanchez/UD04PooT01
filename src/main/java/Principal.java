@@ -24,6 +24,7 @@ public class Principal {
                     principal.testCalculadora();
                     break;
                 case 3: //Probar persona
+                    principal.testPersona();
                     break;
                 case 4: //Probar mi clase
                     break;
@@ -77,7 +78,7 @@ public class Principal {
     /**
      * Probamos la clase Coche
      */
-        private void testCoche(){
+    private void testCoche(){
             //Creamos objetos
             Coche ibiza = new Coche();
             Coche cordoba = new Coche();
@@ -136,5 +137,46 @@ public class Principal {
             System.out.println("División = " + calculadora.getResultadoDivision());
         }
 
+    private void testPersona(){
+        //Creamos el objeto
+        Persona persona = new Persona();
 
+        //Setteamos los valores
+        persona.setNombre("");
+        persona.setApellido("");
+        persona.setEdad(10);
+
+        //Mostramos
+        System.out.println("Nombre completo: " + persona.getFullName());
+        System.out.println("¿Es adolescente? = " + persona.esAdolescente());
+
+        //Setteamos valores
+        persona.setNombre("Mortadelo");
+        persona.setEdad(18);
+
+        //Mostramos
+        System.out.println("Nombre completo: " + persona.getFullName());
+        System.out.println("¿Es adolescente? = " + persona.esAdolescente());
+
+        //Setteamos apellido
+        persona.setApellido("Pérez");
+
+        //Mostramos nombre completo
+        System.out.println("Nombre completo: " + persona.getFullName());
+
+        //Setteamos nif erroneo
+        persona.setNif(9408901,'B');
+
+        //Mostramos Nif
+        System.out.println("NIF: " + persona.getNif());
+
+        //Setteamos nif correcto
+        persona.setNif(94089010,'S');
+
+        //Mostramos Nif
+        System.out.println("NIF: " + persona.getNif());
+
+
+
+    }
 }

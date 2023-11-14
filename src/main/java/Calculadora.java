@@ -1,5 +1,6 @@
 /**
  * La clase calculadora que devuelve los numeros y resultados de las operaciones
+ * Autor: Víctor Sánchez
  */
 public class Calculadora {
     private double primerNumero;
