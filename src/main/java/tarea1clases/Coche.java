@@ -1,5 +1,7 @@
+package tarea1clases;
+
 /**
- * La clase Coche contiene la información de los coches
+ * La clase tarea1clases.Coche contiene la información de los coches
  * Autor: Víctor Sánchez
  */
 public class Coche {

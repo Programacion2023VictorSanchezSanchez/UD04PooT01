@@ -1,3 +1,5 @@
+package tarea1clases;
+
 /**
  * La clase persona contiene la información de personas guardadas
  * Autor: Víctor Sánchez

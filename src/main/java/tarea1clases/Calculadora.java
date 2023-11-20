@@ -1,3 +1,5 @@
+package tarea1clases;
+
 /**
  * La clase calculadora que devuelve los numeros y resultados de las operaciones
  * Autor: Víctor Sánchez

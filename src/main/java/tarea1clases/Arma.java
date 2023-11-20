@@ -1,5 +1,7 @@
+package tarea1clases;
+
 /**
- * La clase Arma contiene estadisticas de posibles armas
+ * La clase tarea1clases.Arma contiene estadisticas de posibles armas
  * Autor: Víctor Sánchez Sánchez
  */
 public class Arma {

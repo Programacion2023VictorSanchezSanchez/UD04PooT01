@@ -1,3 +1,5 @@
+package tarea1clases;
+
 import java.util.Scanner;
 
 public class Principal {
@@ -77,7 +79,7 @@ public class Principal {
     }
 
     /**
-     * Probamos la clase Coche
+     * Probamos la clase tarea1clases.Coche
      */
     private void testCoche(){
             //Creamos objetos
@@ -115,7 +117,7 @@ public class Principal {
         }
 
     /**
-     * Probamos la clase Calculadora
+     * Probamos la clase tarea1clases.Calculadora
      */
     private void testCalculadora(){
             //Creamos el objeto
