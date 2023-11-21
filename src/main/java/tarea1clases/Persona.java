@@ -5,9 +5,9 @@ package tarea1clases;
  * Autor: Víctor Sánchez
  */
 public class Persona {
-    private String nombre;
-    private String apellido;
-    private String nif;
+    private String nombre = "";
+    private String apellido = "";
+    private String nif = "";
     private int edad;
 
     //Setters y getters de nombre

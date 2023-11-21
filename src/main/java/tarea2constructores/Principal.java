@@ -1,5 +1,7 @@
 package tarea2constructores;
 
+import tarea1clases.Persona;
+
 import java.util.Scanner;
 
 public class Principal {
@@ -19,8 +21,8 @@ public class Principal {
         //Salimos cuando el usuario pulsa la opcion "5-Salir"
         while (opc != 5){
             switch(opc) {
-                case 1: //Probar coche
-
+                case 1: //Probar cliente vip
+                    principal.testClienteVip();
                     break;
                 case 2: //Probar calculadora
 
@@ -45,7 +47,7 @@ public class Principal {
         Scanner sc = new Scanner(System.in);
         int opc;
         do{
-            System.out.println("1-Probar coche");
+            System.out.println("1-Probar cliente vip");
             System.out.println("2-Probar calculadora");
             System.out.println("3-Probar persona");
             System.out.println("4-Probar mi clase");
@@ -55,7 +57,7 @@ public class Principal {
             opc = sc.nextInt();
             switch(opc){
                 case 1:
-                    System.out.println("Has elegido la opción 1: Probar mi coche");
+                    System.out.println("Has elegido la opción 1: Probar mi cliente vip");
                     break;
                 case 2:
                     System.out.println("Has elegido la opción 2: Probar mi calculadora");
@@ -76,5 +78,29 @@ public class Principal {
 
         } while (opc < 1 || opc > 5);
         return opc;
+    }
+
+    /**
+     * Probamos la clase ClienteVip
+     */
+    private void testClienteVip(){
+        ClienteVip clienteVip = new ClienteVip();
+        //Constructor sin parametros
+        System.out.println(clienteVip.toString());
+
+        //Constructor con 2 parametros
+        Persona persona = new Persona();
+        persona.setNombre("Pepe");
+        persona.setApellido("Apellido");
+
+        clienteVip = new ClienteVip(persona, 1000.0);
+        System.out.println(clienteVip.toString());
+
+        //Constructor de 4 parametros
+        Persona personaDos = new Persona();
+        personaDos.setNombre("Maria");
+        personaDos.setApellido("Apellido");
+        clienteVip = new ClienteVip(personaDos,TiposVip.GOLD,200000.0,"maria@correo.es");
+        System.out.println(clienteVip.toString());
     }
 }
