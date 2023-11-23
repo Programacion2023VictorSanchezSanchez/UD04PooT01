@@ -1,5 +1,9 @@
 package tarea2constructores;
 
+/**
+ * La clase de Punto contiene informacion de los puntos y la distancia entre estos
+ * Autor: Víctor Sánchez
+ */
 public class Punto {
     private int x;
     private int y;
@@ -40,6 +44,7 @@ public class Punto {
         return distancia;
     }
 
+    //Metodos para mostrar la distancia entre puntos
     public double distancia(){
         double distancia;
         distancia = calcularDistancia(this.x, this.y,X_POR_DEFECTO,Y_POR_DEFECTO);

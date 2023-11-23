@@ -30,8 +30,8 @@ public class Principal {
                 case 3: //Probar punto
                     principal.testPunto();
                     break;
-                case 4: //Probar mi clase
-
+                case 4: //Probar mi presupuesto
+                    principal.testAlfombra();
                     break;
             }
             opc=principal.menu();
@@ -50,7 +50,7 @@ public class Principal {
             System.out.println("1-Probar cliente vip");
             System.out.println("2-Probar superficie");
             System.out.println("3-Probar punto");
-            System.out.println("4-Probar ");
+            System.out.println("4-Probar presupuesto alfombra");
             System.out.println("5-Salir");
 
             System.out.println("Elije una opción: (1-5) ");
@@ -66,7 +66,7 @@ public class Principal {
                     System.out.println("Has elegido la opción 3: Probar mi punto");
                     break;
                 case 4:
-                    System.out.println("Has elegido la opción 4: Probar mi");
+                    System.out.println("Has elegido la opción 4: Probar mi presupuesto de alfombra");
                     break;
                 case 5:
                     System.out.println("Has elegido la opción 5: Salir");
@@ -104,6 +104,7 @@ public class Principal {
         clienteVip = new ClienteVip(personaDos,TiposVip.GOLD,200000.0,"maria@correo.es");
         System.out.println(clienteVip.toString());
     }
+
     /**
      * Probamos la clase Superficie
      */
@@ -145,6 +146,33 @@ public class Principal {
         System.out.println("La distancia del primer punto a 0,0 es = " + puntoUno.distancia());
         System.out.println("La distancia del segundo punto a 0,0 es = " + puntoDos.distancia());
         System.out.println("La distancia entre ambos puntos es = " + puntoUno.distancia(puntoDos));
+
+    }
+
+    /**
+     * Probamos la clase alfombra
+     */
+    private void testAlfombra(){
+        //Creamos clientes
+        Persona personaUno = new Persona();
+        personaUno.setNombre("Manolo");
+        personaUno.setApellido("Gárcia");
+
+        Persona personaDos = new Persona();
+        personaDos.setNombre("Laura");
+        personaDos. setApellido("Toledo");
+
+        //Creamos presupuestos
+        Presupuesto presupuestoUno = new Presupuesto(new Superficie(5,4), new Alfombra("Alfombra1", 25, TiposTejido.POLIESTER), personaUno);
+        Presupuesto presupuestoDos = new Presupuesto(new Superficie(7,6), new Alfombra("Alfombra2", 15, TiposTejido.LANA), personaDos);
+
+        //Mostramos presupuestos
+        System.out.println(presupuestoUno.toString());
+        System.out.println(presupuestoDos.toString());
+
+        //Comparados presupuesto
+        presupuestoUno.comparaPresupuesto(presupuestoDos);
+
 
     }
 }

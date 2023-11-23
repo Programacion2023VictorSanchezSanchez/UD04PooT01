@@ -28,7 +28,7 @@ public class Persona {
 
     //Devuelve el nombre completo
     public String getFullName(){
-        String fullName = this.nombre + "" +  this.apellido;
+        String fullName = this.nombre + " " +  this.apellido;
         if(this.nombre.isEmpty() && this.apellido.isEmpty()){
             fullName = "";
         }
