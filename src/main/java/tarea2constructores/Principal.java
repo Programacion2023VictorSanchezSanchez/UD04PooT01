@@ -27,8 +27,8 @@ public class Principal {
                 case 2: //Probar superficie
                     principal.testSuperficie();
                     break;
-                case 3: //Probar persona
-
+                case 3: //Probar punto
+                    principal.testPunto();
                     break;
                 case 4: //Probar mi clase
 
@@ -49,7 +49,7 @@ public class Principal {
         do{
             System.out.println("1-Probar cliente vip");
             System.out.println("2-Probar superficie");
-            System.out.println("3-Probar ");
+            System.out.println("3-Probar punto");
             System.out.println("4-Probar ");
             System.out.println("5-Salir");
 
@@ -63,7 +63,7 @@ public class Principal {
                     System.out.println("Has elegido la opción 2: Probar mi superficie");
                     break;
                 case 3:
-                    System.out.println("Has elegido la opción 3: Probar mi");
+                    System.out.println("Has elegido la opción 3: Probar mi punto");
                     break;
                 case 4:
                     System.out.println("Has elegido la opción 4: Probar mi");
@@ -118,7 +118,33 @@ public class Principal {
         System.out.println("Ancho = " + superficie.getAncho());
         System.out.println("Alto = " + superficie.getAlto());
         System.out.println("Area = " + superficie.getArea());
+    }
 
+    /**
+     * Probamos la clase Punto
+     */
+    private void testPunto(){
+        Scanner sc = new Scanner(System.in);
+
+        //Creamos objetos
+        Punto puntoUno = new Punto();
+        Punto puntoDos = new Punto();
+
+        //Establecemos coordenadas del primer punto
+        System.out.println("Introduce la coordenada x del primer punto");
+        puntoUno.setX(sc.nextInt());
+        System.out.println("Introduce la coordenada y del primer punto");
+        puntoUno.setY(sc.nextInt());
+
+        //Establecemos coordenadas del segundo punto
+        System.out.println("Introduce la coordenada x del segundo punto");
+        puntoDos.setX(sc.nextInt());
+        System.out.println("Introduce la coordenada y del segundo punto");
+        puntoDos.setY(sc.nextInt());
+
+        System.out.println("La distancia del primer punto a 0,0 es = " + puntoUno.distancia());
+        System.out.println("La distancia del segundo punto a 0,0 es = " + puntoDos.distancia());
+        System.out.println("La distancia entre ambos puntos es = " + puntoUno.distancia(puntoDos));
 
     }
 }
