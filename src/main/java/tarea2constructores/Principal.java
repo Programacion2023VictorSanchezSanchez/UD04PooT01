@@ -24,8 +24,8 @@ public class Principal {
                 case 1: //Probar cliente vip
                     principal.testClienteVip();
                     break;
-                case 2: //Probar calculadora
-
+                case 2: //Probar superficie
+                    principal.testSuperficie();
                     break;
                 case 3: //Probar persona
 
@@ -48,9 +48,9 @@ public class Principal {
         int opc;
         do{
             System.out.println("1-Probar cliente vip");
-            System.out.println("2-Probar calculadora");
-            System.out.println("3-Probar persona");
-            System.out.println("4-Probar mi clase");
+            System.out.println("2-Probar superficie");
+            System.out.println("3-Probar ");
+            System.out.println("4-Probar ");
             System.out.println("5-Salir");
 
             System.out.println("Elije una opción: (1-5) ");
@@ -60,13 +60,13 @@ public class Principal {
                     System.out.println("Has elegido la opción 1: Probar mi cliente vip");
                     break;
                 case 2:
-                    System.out.println("Has elegido la opción 2: Probar mi calculadora");
+                    System.out.println("Has elegido la opción 2: Probar mi superficie");
                     break;
                 case 3:
-                    System.out.println("Has elegido la opción 3: Probar mi persona");
+                    System.out.println("Has elegido la opción 3: Probar mi");
                     break;
                 case 4:
-                    System.out.println("Has elegido la opción 4: Probar mi clase");
+                    System.out.println("Has elegido la opción 4: Probar mi");
                     break;
                 case 5:
                     System.out.println("Has elegido la opción 5: Salir");
@@ -84,8 +84,8 @@ public class Principal {
      * Probamos la clase ClienteVip
      */
     private void testClienteVip(){
-        ClienteVip clienteVip = new ClienteVip();
         //Constructor sin parametros
+        ClienteVip clienteVip = new ClienteVip();
         System.out.println(clienteVip.toString());
 
         //Constructor con 2 parametros
@@ -100,7 +100,25 @@ public class Principal {
         Persona personaDos = new Persona();
         personaDos.setNombre("Maria");
         personaDos.setApellido("Apellido");
+
         clienteVip = new ClienteVip(personaDos,TiposVip.GOLD,200000.0,"maria@correo.es");
         System.out.println(clienteVip.toString());
+    }
+    /**
+     * Probamos la clase Superficie
+     */
+    private void testSuperficie(){
+
+        //Constructor con 2 parametros
+        Superficie superficie = new Superficie(5,4);
+        System.out.println("Area = " + superficie.getArea());
+
+        //Cambiamos un parametro y mostramos
+        superficie.setAlto(-1.5);
+        System.out.println("Ancho = " + superficie.getAncho());
+        System.out.println("Alto = " + superficie.getAlto());
+        System.out.println("Area = " + superficie.getArea());
+
+
     }
 }
