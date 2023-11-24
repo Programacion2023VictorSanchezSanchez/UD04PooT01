@@ -86,7 +86,7 @@ public class Principal {
     private void testClienteVip(){
         //Constructor sin parametros
         ClienteVip clienteVip = new ClienteVip();
-        System.out.println(clienteVip.toString());
+        System.out.println(clienteVip);
 
         //Constructor con 2 parametros
         Persona persona = new Persona();
@@ -94,7 +94,7 @@ public class Principal {
         persona.setApellido("Apellido");
 
         clienteVip = new ClienteVip(persona, 1000.0);
-        System.out.println(clienteVip.toString());
+        System.out.println(clienteVip);
 
         //Constructor de 4 parametros
         Persona personaDos = new Persona();
@@ -102,7 +102,7 @@ public class Principal {
         personaDos.setApellido("Apellido");
 
         clienteVip = new ClienteVip(personaDos,TiposVip.GOLD,200000.0,"maria@correo.es");
-        System.out.println(clienteVip.toString());
+        System.out.println(clienteVip);
     }
 
     /**
@@ -167,8 +167,8 @@ public class Principal {
         Presupuesto presupuestoDos = new Presupuesto(new Superficie(7,6), new Alfombra("Alfombra2", 15, TiposTejido.LANA), personaDos);
 
         //Mostramos presupuestos
-        System.out.println(presupuestoUno.toString());
-        System.out.println(presupuestoDos.toString());
+        System.out.println(presupuestoUno);
+        System.out.println(presupuestoDos);
 
         //Comparados presupuesto
         presupuestoUno.comparaPresupuesto(presupuestoDos);
