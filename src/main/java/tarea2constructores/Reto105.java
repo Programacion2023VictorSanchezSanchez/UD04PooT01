@@ -45,15 +45,14 @@ public class Reto105 {
             }
 
             //Mostramos resultado si ambos son falsos, si alguno de los 2 es true mostramos empate
-            if (!esMayor && !esMenor) {
-                System.out.println(selectorDia(indiceMayor) + " " + selectorDia(indiceMenor) + " " + (suma / 6 < num ? "SI" : "NO"));
 
-            } else {
-                System.out.println("EMPATE");
-            }
+            System.out.println((esMayor || esMenor ? "EMPATE" : selectorDia(indiceMayor) + " " + selectorDia(indiceMenor)) + " " + (suma / 6 < num ? "SI" : "NO"));
+
+
+
 
         }
-        sc.close();
+
     }
 
     /**
