@@ -42,11 +42,15 @@ public class Reto105 {
                     indiceMenor = i;
                     esMenor = false;
                 }
+                if(mayor == menor){
+                    esMayor = true;
+                    esMenor = true;
+                }
             }
 
             //Mostramos resultado si ambos son falsos, si alguno de los 2 es true mostramos empate
 
-            System.out.println((esMayor || esMenor ? "EMPATE" : selectorDia(indiceMayor) + " " + selectorDia(indiceMenor)) + " " + (suma / 6 < num ? "SI" : "NO"));
+            System.out.print((esMayor ? "EMPATE" : selectorDia(indiceMayor)) + " " + (esMenor ? "EMPATE" : selectorDia(indiceMenor)) + " " + (suma / 6 < num ? "SI" : "NO") + "\n");
 
 
 
@@ -60,7 +64,7 @@ public class Reto105 {
      * @param i el indice que estamos almacenando
      * @return dia de la semana
      */
-    private static String selectorDia(int i){
+    public static String selectorDia(int i){
         String dia = "";
         switch (i){
             case 0:
