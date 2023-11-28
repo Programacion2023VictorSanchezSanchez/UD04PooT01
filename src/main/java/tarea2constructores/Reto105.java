@@ -4,17 +4,17 @@ import java.util.Scanner;
 
 public class Reto105 {
     public static void main(String[] args) {
-        double num = 0;
+        float num = 0;
 
         Scanner sc = new Scanner(System.in);
         System.out.println("Introduce las ventas de esta semana o -1 para salir");
 
         //Bucle que se ejecuta mientras el numero introducido no sea -1
-        while ((num = sc.nextDouble()) != -1) {
+        while ((num = sc.nextFloat()) != -1) {
             //Inicializamos las variables al numero introducido
-            double mayor = num;
-            double menor = num;
-            double suma = num;
+            float  mayor = num;
+            float  menor = num;
+            float  suma = num;
 
             //Inicializamos las variables en 0
             int indiceMayor = 0;
@@ -27,7 +27,7 @@ public class Reto105 {
 
             //Bucle que almacena las ventas de la semana
             for (int i = 1; i <= 5; i++) {
-                num = sc.nextDouble();
+                num = sc.nextFloat();
                 suma += num;
                 if (num == mayor) {
                     esMayor = true;
@@ -42,21 +42,18 @@ public class Reto105 {
                     indiceMenor = i;
                     esMenor = false;
                 }
-                if(mayor == menor){
-                    esMayor = true;
-                    esMenor = true;
-                }
             }
 
             //Mostramos resultado si ambos son falsos, si alguno de los 2 es true mostramos empate
 
-            System.out.print((esMayor ? "EMPATE" : selectorDia(indiceMayor)) + " " + (esMenor ? "EMPATE" : selectorDia(indiceMenor)) + " " + (suma / 6 < num ? "SI" : "NO") + "\n");
-
-
-
+            if(esMayor || esMenor){
+                System.out.print("EMPATE\n");
+            }else {
+                System.out.print(selectorDia(indiceMayor) + " " + selectorDia(indiceMenor) + " " + (suma / 6 < num ? "SI" : "NO") + "\n");
+            }
 
         }
-
+        sc.close();
     }
 
     /**
