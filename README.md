@@ -8,4 +8,4 @@ No me lo aceptaron hice bastantes pruebas y no logro encontrar por qué no me lo
 ### 1. ¿Qué sucede cuando se compila y ejecuta el siguiente programa?
 Muestra 1, luego 1 y luego 6, el único contador que se ha ido acumulando conforme se han ido creando nuevos objetos ha sido el static, los demás empiezan en 1.
 ### 2.¿Qué sucede cuando intenta compilar y ejecutar el siguiente programa? 
-
+Primero muestra 16 ya que x * x con x valiendo 4 da 16, luego muestra x 16-y1
