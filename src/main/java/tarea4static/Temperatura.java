@@ -8,26 +8,11 @@ package tarea4static;
 
 public class Temperatura {
 
-    /**
-     * tipo enum de Temperatura
-     */
-    enum TipoTemperatura{
-
-        CELSIUS, FAHRENHEIT
-    }
-
-    /**
-     * tipo enum para el dia de la semana
-     */
-    enum DiaSemana{
-        LUNES, MARTES, MIERCOLES, JUEVES, VIERNES, SABADO, DOMINGO
-    }
-
     //Definimos la variable static
     private static TipoTemperatura configuracionActual = TipoTemperatura.CELSIUS;
 
     //Getter configuración actual
-    public TipoTemperatura getConfiguracionActual(){
+    public static TipoTemperatura getConfiguracionActual(){
         return configuracionActual;
     }
 
