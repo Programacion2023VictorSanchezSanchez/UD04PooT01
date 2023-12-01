@@ -20,7 +20,7 @@ public class Principal {
         while (opc != 5){
             switch(opc) {
                 case 1: //Probar temperatura
-
+                    principal.testTemperatura();
                     break;
                 case 2: //Probar
 
@@ -77,4 +77,10 @@ public class Principal {
         } while (opc < 1 || opc > 5);
         return opc;
     }
+
+    private void testTemperatura(){
+
+    }
 }
+
+
