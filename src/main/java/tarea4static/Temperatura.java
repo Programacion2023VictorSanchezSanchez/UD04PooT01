@@ -26,6 +26,11 @@ public class Temperatura {
     //Definimos la variable static
     private static TipoTemperatura configuracionActual = TipoTemperatura.CELSIUS;
 
+    //Getter configuración actual
+    public TipoTemperatura getConfiguracionActual(){
+        return configuracionActual;
+    }
+
     //Definimos variables
     private double tempCelsius;
     private double tempFahrenheit;
@@ -93,4 +98,19 @@ public class Temperatura {
         fahrenheit = (temperatura * 9/5) + 32;
         return fahrenheit;
     }
+
+    //Sobrecargamos toString
+    public String toString() {
+        if(configuracionActual == TipoTemperatura.CELSIUS) {
+            return this.diaSemana + " " + tempCelsius + "ºC\n" +
+                    "Si fuera la configuración Fahrenheit\n" +
+                    this.diaSemana + " " + tempFahrenheit + "ºF\n";
+        }
+        else{
+            return this.diaSemana + " " + tempFahrenheit + "ºF\n" +
+                    "Si fuera la configuración Celsius\n" +
+                    this.diaSemana + " " + tempCelsius + "ºC\n";
+        }
+    }
+
 }
