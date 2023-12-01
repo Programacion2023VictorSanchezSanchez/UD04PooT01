@@ -1,6 +1,6 @@
 # UD04PooT01
 ## Reto 105
-No me lo aceptaron hice bastantes pruebas y no logro encontrar por qué no me lo aceptan cuando he probado todos los casos que se me ocurren y lo muestra tal y como quiere
+No me lo aceptaron hice bastantes pruebas y no logro encontrar por qué no me lo aceptan cuando he probado todos los casos que se me ocurren y lo muestra tal y como quiere.
 ## Reto 664
 ## Ejercicios Tarea 3
 ### 1.
